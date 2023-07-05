@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Layout() {
   return (
@@ -22,14 +22,25 @@ function Layout() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className={"nav-link "} href="/quiz1">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                to="/quiz1"
+              >
                 Quiz 1
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className={"nav-link "} href="/quiz2" aria-current="page">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                to="/quiz2"
+                aria-current="page"
+              >
                 Quiz 2
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

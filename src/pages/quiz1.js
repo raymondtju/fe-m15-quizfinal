@@ -26,7 +26,7 @@ function Quiz1() {
     } else if (akhir >= 60) setGrad("B");
     else if (akhir >= 40) setGrad("C");
     else setGrad("E");
-  }, [nilai]);
+  }, [nilai, akhir]);
 
   return (
     <main className="p-5" style={{ width: "50%", margin: "0px auto" }}>
